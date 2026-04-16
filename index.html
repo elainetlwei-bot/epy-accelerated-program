@@ -7,7 +7,7 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f0; min-height: 100vh; padding: 2rem 1rem; color: #1a1a18; }
-:root { --maroon: #660000; --maroon-dark: #4a0000; --maroon-light: #f9f0f0; --gold: #c8a951; --gold-light: #fdf6e3; --border: rgba(0,0,0,0.12); --border-hover: rgba(0,0,0,0.25); --bg-secondary: #f1efe8; --text-secondary: #73726c; --text-tertiary: #9c9a92; }
+:root { --maroon: #660000; --maroon-light: #f9f0f0; --gold: #c8a951; --gold-light: #fdf6e3; --border: rgba(0,0,0,0.12); --bg-secondary: #f1efe8; --text-secondary: #73726c; --text-tertiary: #9c9a92; }
 .shell { border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; max-width: 680px; margin: 0 auto; background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
 .header { background: var(--maroon); padding: 1.4rem 1.75rem; }
 .header-badge { display: inline-block; background: rgba(200,169,81,0.22); color: var(--gold); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; border: 0.5px solid rgba(200,169,81,0.35); margin-bottom: 8px; }
@@ -29,13 +29,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .question-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; }
 .radio-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1.25rem; }
 .radio-option { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 0.5px solid var(--border); border-radius: 8px; cursor: pointer; font-size: 14px; color: #1a1a18; transition: border-color 0.15s, background 0.15s; }
-.radio-option:hover { border-color: var(--border-hover); background: var(--bg-secondary); }
+.radio-option:hover { border-color: rgba(0,0,0,0.25); background: var(--bg-secondary); }
 .radio-option.selected { border-color: var(--maroon); background: var(--maroon-light); }
 .radio-option input { accent-color: var(--maroon); width: 15px; height: 15px; }
 .btn { display: inline-block; padding: 9px 20px; font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; border: none; transition: opacity 0.15s, transform 0.1s; }
 .btn:active { transform: scale(0.98); }
 .btn-primary { background: var(--maroon); color: white; }
 .btn-primary:hover { opacity: 0.88; }
+.btn-apply { background: #1a6b1a; color: white; }
+.btn-apply:hover { opacity: 0.88; }
 .btn-ghost { background: transparent; color: var(--text-secondary); border: 0.5px solid var(--border); margin-right: 8px; }
 .btn-ghost:hover { background: var(--bg-secondary); }
 .result-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px; }
@@ -220,23 +222,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       </div>
       <div class="panel" id="panel-compare">
         <div class="compare-grid">
-          <div class="compare-card">
-            <div class="compare-title">Standard path</div><div class="compare-sub">Bachelor&#8217;s, then master&#8217;s separately</div>
-            <div class="compare-row"><span class="compare-key">Bachelor&#8217;s</span><span class="compare-val">4 years</span></div>
-            <div class="compare-row"><span class="compare-key">Master&#8217;s</span><span class="compare-val">~2 years</span></div>
-            <div class="compare-row"><span class="compare-key">Total time</span><span class="compare-val">~6 years</span></div>
-            <div class="compare-row"><span class="compare-key">Dual-credit savings</span><span class="compare-val">None</span></div>
-            <div class="compare-row"><span class="compare-key">Seamless transition</span><span class="compare-val">Not guaranteed</span></div>
-          </div>
-          <div class="compare-card highlight">
-            <div class="compare-badge">Accelerated program</div>
-            <div class="compare-title">Accelerated path</div><div class="compare-sub">Dual-credit overlap during final years</div>
-            <div class="compare-row"><span class="compare-key">Bachelor&#8217;s</span><span class="compare-val">4 years</span></div>
-            <div class="compare-row"><span class="compare-key">Master&#8217;s remaining</span><span class="compare-val good">~1 year</span></div>
-            <div class="compare-row"><span class="compare-key">Total time</span><span class="compare-val good">~5 years</span></div>
-            <div class="compare-row"><span class="compare-key">Dual-credit savings</span><span class="compare-val good">Up to 9 hrs</span></div>
-            <div class="compare-row"><span class="compare-key">Seamless transition</span><span class="compare-val good">Yes</span></div>
-          </div>
+          <div class="compare-card"><div class="compare-title">Standard path</div><div class="compare-sub">Bachelor&#8217;s, then master&#8217;s separately</div><div class="compare-row"><span class="compare-key">Bachelor&#8217;s</span><span class="compare-val">4 years</span></div><div class="compare-row"><span class="compare-key">Master&#8217;s</span><span class="compare-val">~2 years</span></div><div class="compare-row"><span class="compare-key">Total time</span><span class="compare-val">~6 years</span></div><div class="compare-row"><span class="compare-key">Dual-credit savings</span><span class="compare-val">None</span></div><div class="compare-row"><span class="compare-key">Seamless transition</span><span class="compare-val">Not guaranteed</span></div></div>
+          <div class="compare-card highlight"><div class="compare-badge">Accelerated program</div><div class="compare-title">Accelerated path</div><div class="compare-sub">Dual-credit overlap during final years</div><div class="compare-row"><span class="compare-key">Bachelor&#8217;s</span><span class="compare-val">4 years</span></div><div class="compare-row"><span class="compare-key">Master&#8217;s remaining</span><span class="compare-val good">~1 year</span></div><div class="compare-row"><span class="compare-key">Total time</span><span class="compare-val good">~5 years</span></div><div class="compare-row"><span class="compare-key">Dual-credit savings</span><span class="compare-val good">Up to 9 hrs</span></div><div class="compare-row"><span class="compare-key">Seamless transition</span><span class="compare-val good">Yes</span></div></div>
         </div>
         <div style="margin-top:1rem;padding:12px 14px;background:var(--bg-secondary);border-radius:8px;font-size:13px;color:var(--text-secondary);line-height:1.6">The 9 dual-credit hours mean you pay undergraduate tuition rates for coursework that simultaneously satisfies graduate requirements &#8212; one of the most significant financial benefits of the program.</div>
       </div>
@@ -285,6 +272,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
         <div style="margin-top:10px;font-size:12px;color:#660000;opacity:0.8">Dual-credit hours are capped at 9 and grad-only hours at 6 &#8212; each requiring a separate form. Contact Dr. Elaine Wei for guidance on which courses fall under each category.</div>
       </div>
       <div class="action-row" style="margin-top:1rem">
+        <button class="btn btn-apply" onclick="window.open('https://msstate.co1.qualtrics.com/jfe/form/SV_b4abk3cepmzCgya','_blank')">Apply now &#8594;</button>
         <button class="btn btn-primary" onclick="window.location.href='mailto:ewei@colled.msstate.edu'">Contact Dr. Elaine Wei</button>
         <button class="btn btn-ghost" onclick="resetPlanner()">Reset planner</button>
       </div>
@@ -295,6 +283,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 
 <script>
 var TOTAL_HRS = 15;
+var APPLY_URL = 'https://msstate.co1.qualtrics.com/jfe/form/SV_b4abk3cepmzCgya';
 var COURSES = [
   { id:'c1', ug:'EPY 4033', grad:'EPY 6033', name:'Application of Learning Theories',                   hrs:3, pattern:'fs', everyTerm:true,  optional:false },
   { id:'c2', ug:'EPY 4553', grad:'EPY 6553', name:'Creativity and Innovation',                          hrs:3, pattern:'fe', everyTerm:false, optional:false },
@@ -304,117 +293,99 @@ var COURSES = [
   { id:'c6', ug:'EPY 4214', grad:'EPY 6214', name:'Educational and Psychological Statistics',           hrs:4, pattern:'fs', everyTerm:true,  optional:true  }
 ];
 function getNextSemester() {
-  var now = new Date(); var month = now.getMonth() + 1; var year = now.getFullYear();
-  if (month >= 8 && month <= 12) return { season:'spring', year: year + 1 };
-  return { season:'fall', year: year };
+  var now = new Date(); var m = now.getMonth()+1; var y = now.getFullYear();
+  return (m>=8&&m<=12) ? {season:'spring',year:y+1} : {season:'fall',year:y};
 }
 function buildFourSemesters() {
-  var next = getNextSemester(); var sems = []; var season = next.season; var year = next.year;
-  for (var i = 0; i < 4; i++) {
-    sems.push({ label: capitalize(season) + ' ' + year, season: season, year: year });
-    if (season === 'fall') { season = 'spring'; year++; } else { season = 'fall'; }
-  }
+  var n=getNextSemester(); var sems=[]; var s=n.season; var y=n.year;
+  for(var i=0;i<4;i++){sems.push({label:cap(s)+' '+y,season:s,year:y});if(s==='fall'){s='spring';y++;}else{s='fall';}}
   return sems;
 }
-function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
-function courseOfferedIn(course, sem) {
-  var p = course.pattern;
-  if (p === 'fs') return true;
-  if (p === 'fe') return sem.season === 'fall'   && sem.year % 2 === 0;
-  if (p === 'fo') return sem.season === 'fall'   && sem.year % 2 === 1;
-  if (p === 'so') return sem.season === 'spring' && sem.year % 2 === 1;
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
+function offered(c,sem){
+  var p=c.pattern;
+  if(p==='fs')return true;
+  if(p==='fe')return sem.season==='fall'&&sem.year%2===0;
+  if(p==='fo')return sem.season==='fall'&&sem.year%2===1;
+  if(p==='so')return sem.season==='spring'&&sem.year%2===1;
   return false;
 }
-function syncEveryTerm(changedEl) {
-  var cid = changedEl.getAttribute('data-cid'); var checked = changedEl.checked;
-  document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(el){ el.checked = checked; });
-  lockEveryTermDuplicates(cid, checked); updatePlanner();
+function syncEvery(el){
+  var cid=el.getAttribute('data-cid');var checked=el.checked;
+  document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(x){x.checked=checked;});
+  lockDupes(cid,checked);updatePlanner();
 }
-function lockEveryTermDuplicates(cid, completed) {
-  var course = COURSES.find(function(x){ return x.id === cid; });
-  document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(el, idx){ el.disabled = completed && idx !== 0; });
-  document.querySelectorAll('.course-name[data-cid="'+cid+'"]').forEach(function(el){ if(completed) el.classList.add('taken'); else el.classList.remove('taken'); });
+function lockDupes(cid,done){
+  var c=COURSES.find(function(x){return x.id===cid;});
+  document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(el,i){el.disabled=done&&i!==0;});
+  document.querySelectorAll('.course-name[data-cid="'+cid+'"]').forEach(function(el){if(done)el.classList.add('taken');else el.classList.remove('taken');});
   document.querySelectorAll('.badge-area[data-cid="'+cid+'"]').forEach(function(el){
-    if (completed) { el.innerHTML = '<div class="badge-taken">Completed</div>'; }
-    else if (course && course.optional) { el.innerHTML = '<div class="badge-optional">Optional / 4 hrs</div>'; }
-    else { el.innerHTML = '<div class="badge-dual">Dual-credit</div>'; }
+    if(done){el.innerHTML='<div class="badge-taken">Completed</div>';}
+    else if(c&&c.optional){el.innerHTML='<div class="badge-optional">Optional / 4 hrs</div>';}
+    else{el.innerHTML='<div class="badge-dual">Dual-credit</div>';}
   });
 }
-function renderSchedule() {
-  var sems = buildFourSemesters();
-  document.getElementById('planner-intro').innerHTML =
-    'Courses are shown across <strong>' + sems[0].label + ' \u2013 ' + sems[3].label + '</strong> based on each course\u2019s offering pattern. EPY 4033/6033 and EPY 4214/6214 appear every semester \u2014 check either off once and it will be marked complete across all semesters.';
-  var container = document.getElementById('schedule-container'); container.innerHTML = '';
-  var courseInstanceCount = {};
-  sems.forEach(function(sem, semIdx) {
-    var reqCourses = COURSES.filter(function(c){ return !c.optional && courseOfferedIn(c, sem); });
-    var optCourses = COURSES.filter(function(c){ return  c.optional && courseOfferedIn(c, sem); });
-    var tagCls = semIdx === 0 ? 'tag-next' : semIdx === 1 ? 'tag-upcoming' : 'tag-future';
-    var tagLbl = semIdx === 0 ? 'Next semester' : semIdx === 1 ? 'Upcoming' : 'Future';
-    var div = document.createElement('div');
-    div.className = 'sched-block open'; div.id = 'sblock-'+semIdx;
-    function renderCourse(c) {
-      var instanceIdx = courseInstanceCount[c.id] || 0; courseInstanceCount[c.id] = instanceIdx + 1;
-      var inputId = 'chk-'+c.id+'-'+instanceIdx;
-      var onchg = c.everyTerm ? 'syncEveryTerm(this)' : 'updatePlanner()';
-      var badgeHtml = c.optional ? '<div class="badge-optional">Optional / 4 hrs</div>' : '<div class="badge-dual">Dual-credit</div>';
-      var noteHtml  = c.optional ? '<div class="course-note">Substitute for EPY 4214 \u2014 watch the caps: dual-credit max 9 hrs, grad-only max 6 hrs</div>' : '';
-      return '<div class="course-row">' +
-        '<input type="checkbox" class="course-check" id="'+inputId+'" data-cid="'+c.id+'" data-hrs="'+c.hrs+'" onchange="'+onchg+'">' +
-        '<div class="course-info"><div class="course-name" data-cid="'+c.id+'">'+c.name+'</div>' +
-        '<div class="course-nums"><span class="course-ug">UG: '+c.ug+'</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="course-grad">Grad: '+c.grad+'</span></div>' +
-        noteHtml+'</div>' +
-        '<div class="course-right"><div class="course-hrs">'+c.hrs+' hrs</div>' +
-        '<div class="badge-area" data-cid="'+c.id+'">'+badgeHtml+'</div></div></div>';
+function renderSchedule(){
+  var sems=buildFourSemesters();
+  document.getElementById('planner-intro').innerHTML='Courses are shown across <strong>'+sems[0].label+' \u2013 '+sems[3].label+'</strong> based on each course\u2019s offering pattern. EPY 4033/6033 and EPY 4214/6214 appear every semester \u2014 check either off once and it will be marked complete across all semesters.';
+  var container=document.getElementById('schedule-container');container.innerHTML='';
+  var cnt={};
+  sems.forEach(function(sem,si){
+    var req=COURSES.filter(function(c){return!c.optional&&offered(c,sem);});
+    var opt=COURSES.filter(function(c){return c.optional&&offered(c,sem);});
+    var tc=si===0?'tag-next':si===1?'tag-upcoming':'tag-future';
+    var tl=si===0?'Next semester':si===1?'Upcoming':'Future';
+    var div=document.createElement('div');div.className='sched-block open';div.id='sb-'+si;
+    function rc(c){
+      var idx=cnt[c.id]||0;cnt[c.id]=idx+1;
+      var iid='chk-'+c.id+'-'+idx;
+      var oc=c.everyTerm?'syncEvery(this)':'updatePlanner()';
+      var bh=c.optional?'<div class="badge-optional">Optional / 4 hrs</div>':'<div class="badge-dual">Dual-credit</div>';
+      var nh=c.optional?'<div class="course-note">Substitute for EPY 4214 \u2014 watch the caps: dual-credit max 9 hrs, grad-only max 6 hrs</div>':'';
+      return '<div class="course-row"><input type="checkbox" class="course-check" id="'+iid+'" data-cid="'+c.id+'" data-hrs="'+c.hrs+'" onchange="'+oc+'"><div class="course-info"><div class="course-name" data-cid="'+c.id+'">'+c.name+'</div><div class="course-nums"><span class="course-ug">UG: '+c.ug+'</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="course-grad">Grad: '+c.grad+'</span></div>'+nh+'</div><div class="course-right"><div class="course-hrs">'+c.hrs+' hrs</div><div class="badge-area" data-cid="'+c.id+'">'+bh+'</div></div></div>';
     }
-    var reqHtml = reqCourses.length > 0 ? reqCourses.map(renderCourse).join('') : '<div class="no-courses">No required courses this semester</div>';
-    var optHtml = optCourses.length > 0 ? '<div class="optional-divider"></div><div class="optional-label">Optional substitute</div>' + optCourses.map(renderCourse).join('') : '';
-    div.innerHTML = '<div class="sched-header"><span class="sched-title">'+sem.label+'</span>' +
-      '<div style="display:flex;align-items:center;gap:8px"><span class="sched-tag '+tagCls+'">'+tagLbl+'</span>' +
-      '<span class="sem-toggle" onclick="toggleSem(\'sblock-'+semIdx+'\')">&#9660;</span></div></div>' +
-      '<div class="sched-body">'+reqHtml+optHtml+'</div>';
+    var rh=req.length>0?req.map(rc).join(''):'<div class="no-courses">No required courses this semester</div>';
+    var oh=opt.length>0?'<div class="optional-divider"></div><div class="optional-label">Optional substitute</div>'+opt.map(rc).join(''):'';
+    div.innerHTML='<div class="sched-header"><span class="sched-title">'+sem.label+'</span><div style="display:flex;align-items:center;gap:8px"><span class="sched-tag '+tc+'">'+tl+'</span><span class="sem-toggle" onclick="toggleSem(\'sb-'+si+'\')">&#9660;</span></div></div><div class="sched-body">'+rh+oh+'</div>';
     container.appendChild(div);
   });
 }
-function updatePlanner() {
-  var counted = {}; var total = 0;
-  document.querySelectorAll('.course-check').forEach(function(c){
-    if(c.checked && !c.disabled){ var cid=c.getAttribute('data-cid'); if(!counted[cid]){ counted[cid]=true; total+=parseInt(c.getAttribute('data-hrs')); } }
-  });
-  var remain = Math.max(0, TOTAL_HRS - total); var pct = Math.round(Math.min(100, total/TOTAL_HRS*100));
-  document.getElementById('ps-completed').textContent = total;
-  document.getElementById('ps-total').textContent = total + ' / ' + TOTAL_HRS;
-  document.getElementById('ps-remain').textContent = remain;
-  document.getElementById('prog-pct').textContent = pct + '%';
-  document.getElementById('planner-bar').style.width = pct + '%';
+function updatePlanner(){
+  var counted={};var total=0;
+  document.querySelectorAll('.course-check').forEach(function(c){if(c.checked&&!c.disabled){var cid=c.getAttribute('data-cid');if(!counted[cid]){counted[cid]=true;total+=parseInt(c.getAttribute('data-hrs'));}}});
+  var remain=Math.max(0,TOTAL_HRS-total);var pct=Math.round(Math.min(100,total/TOTAL_HRS*100));
+  document.getElementById('ps-completed').textContent=total;
+  document.getElementById('ps-total').textContent=total+' / '+TOTAL_HRS;
+  document.getElementById('ps-remain').textContent=remain;
+  document.getElementById('prog-pct').textContent=pct+'%';
+  document.getElementById('planner-bar').style.width=pct+'%';
 }
-function resetPlanner() {
-  document.querySelectorAll('.course-check').forEach(function(c){ c.checked=false; c.disabled=false; });
-  document.querySelectorAll('.course-name').forEach(function(el){ el.classList.remove('taken'); });
+function resetPlanner(){
+  document.querySelectorAll('.course-check').forEach(function(c){c.checked=false;c.disabled=false;});
+  document.querySelectorAll('.course-name').forEach(function(el){el.classList.remove('taken');});
   document.querySelectorAll('.badge-area').forEach(function(el){
-    var cid = el.getAttribute('data-cid');
-    var course = COURSES.find(function(x){ return x.id===cid; });
-    el.innerHTML = course && course.optional ? '<div class="badge-optional">Optional / 4 hrs</div>' : '<div class="badge-dual">Dual-credit</div>';
+    var cid=el.getAttribute('data-cid');var c=COURSES.find(function(x){return x.id===cid;});
+    el.innerHTML=c&&c.optional?'<div class="badge-optional">Optional / 4 hrs</div>':'<div class="badge-dual">Dual-credit</div>';
   });
   updatePlanner();
 }
-function toggleSem(id){ document.getElementById(id).classList.toggle('open'); }
-function switchSection(name) {
-  document.querySelectorAll('.nav-btn').forEach(function(b){ b.classList.remove('active'); });
-  document.querySelectorAll('.section').forEach(function(s){ s.classList.remove('active'); });
+function toggleSem(id){document.getElementById(id).classList.toggle('open');}
+function switchSection(name){
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
   document.querySelector('[onclick="switchSection(\''+name+'\')"]').classList.add('active');
   document.getElementById('section-'+name).classList.add('active');
 }
-function switchTab(name) {
-  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
   document.querySelector('[onclick="switchTab(\''+name+'\')"]').classList.add('active');
   document.getElementById('panel-'+name).classList.add('active');
 }
-function getSelected(name){ var el=document.querySelector('input[name="'+name+'"]:checked'); return el?el.value:null; }
+function getSel(name){var el=document.querySelector('input[name="'+name+'"]:checked');return el?el.value:null;}
 function goNext(step){
-  if(step===1&&!getSelected('hours')){ alert('Please select an option.'); return; }
-  if(step===2&&!getSelected('gpa')){ alert('Please select an option.'); return; }
+  if(step===1&&!getSel('hours')){alert('Please select an option.');return;}
+  if(step===2&&!getSel('gpa')){alert('Please select an option.');return;}
   document.getElementById('step-'+step).classList.remove('active');
   document.getElementById('step-'+(step+1)).classList.add('active');
   document.getElementById('prog').style.width=((step+1)/4*100)+'%';
@@ -425,14 +396,14 @@ function goBack(step){
   document.getElementById('prog').style.width=((step-1)/4*100)+'%';
 }
 document.querySelectorAll('.radio-option').forEach(function(label){
-  label.querySelector('input').addEventListener('change', function(){
-    label.closest('.radio-group').querySelectorAll('.radio-option').forEach(function(l){ l.classList.remove('selected'); });
+  label.querySelector('input').addEventListener('change',function(){
+    label.closest('.radio-group').querySelectorAll('.radio-option').forEach(function(l){l.classList.remove('selected');});
     label.classList.add('selected');
   });
 });
 function showResult(){
-  if(!getSelected('enrolled')){ alert('Please select an option.'); return; }
-  var hours=getSelected('hours'), gpa=getSelected('gpa'), enrolled=getSelected('enrolled');
+  if(!getSel('enrolled')){alert('Please select an option.');return;}
+  var hours=getSel('hours'),gpa=getSel('gpa'),enrolled=getSel('enrolled');
   document.getElementById('step-3').classList.remove('active');
   document.getElementById('step-result').classList.add('active');
   document.getElementById('prog').style.width='100%';
@@ -446,24 +417,29 @@ function showResult(){
   } else if(enrolled==='transfer'){
     html='<div class="result-icon maybe">!</div><div class="result-title">Potentially eligible \u2014 let\u2019s talk</div><div class="result-desc">Your GPA and credit hours look promising! Since you\u2019re not yet enrolled at MSU, connect with the program coordinator to discuss your path forward.</div>';
   } else {
-    html='<div class="result-icon eligible">\u2713</div><div class="result-title">You appear to be eligible!</div><div class="result-desc">Based on your credit hours and GPA, you meet the basic requirements for the Accelerated Master\u2019s Program in Educational Psychology.</div><div class="info-card"><h3>Application deadlines</h3><ul><li>November 1 \u2014 to begin in Spring semester</li><li>May 1 \u2014 to begin in Fall semester</li></ul></div><div class="info-card"><h3>What you\u2019ll need</h3><ul><li>A statement of purpose (500\u2013750 words)</li><li>Formal application through the MSU Graduate School</li></ul></div>';
-  }
-  html += '<div class="action-row">' +
-    '<button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button>' +
-    '<button class="btn btn-ghost" onclick="switchSection(\'explainer\')">How it works \u2192</button>' +
-    '<button class="btn btn-ghost" onclick="switchSection(\'planner\')">Course planner \u2192</button>' +
-    '<button class="btn btn-ghost" onclick="resetChecker()">Start over</button>' +
+    html='<div class="result-icon eligible">\u2713</div><div class="result-title">You appear to be eligible!</div><div class="result-desc">Based on your credit hours and GPA, you meet the basic requirements for the Accelerated Master\u2019s Program in Educational Psychology.</div>'+
+    '<div class="info-card"><h3>Application deadlines</h3><ul><li>November 1 \u2014 to begin in Spring semester</li><li>May 1 \u2014 to begin in Fall semester</li></ul></div>'+
+    '<div class="info-card"><h3>What you\u2019ll need</h3><ul><li>A statement of purpose (500\u2013750 words)</li><li>Formal application through the MSU Graduate School</li></ul></div>'+
+    '<div class="action-row">'+
+      '<button class="btn btn-apply" onclick="window.open(\''+APPLY_URL+'\',\'_blank\')">Apply now \u2192</button>'+
+      '<button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button>'+
+      '<button class="btn btn-ghost" onclick="switchSection(\'planner\')">Plan my courses \u2192</button>'+
+      '<button class="btn btn-ghost" onclick="resetChecker()">Start over</button>'+
     '</div>';
-  document.getElementById('result-content').innerHTML = html;
+    document.getElementById('result-content').innerHTML=html;
+    return;
+  }
+  html+='<div class="action-row"><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="switchSection(\'explainer\')">How it works \u2192</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';
+  document.getElementById('result-content').innerHTML=html;
 }
 function resetChecker(){
   document.getElementById('step-result').classList.remove('active');
-  document.querySelectorAll('.radio-option').forEach(function(l){ l.classList.remove('selected'); });
-  document.querySelectorAll('input[type=radio]').forEach(function(r){ r.checked=false; });
+  document.querySelectorAll('.radio-option').forEach(function(l){l.classList.remove('selected');});
+  document.querySelectorAll('input[type=radio]').forEach(function(r){r.checked=false;});
   document.getElementById('step-1').classList.add('active');
   document.getElementById('prog').style.width='25%';
 }
-function toggleFaq(el){ el.classList.toggle('open'); }
+function toggleFaq(el){el.classList.toggle('open');}
 renderSchedule();
 </script>
 </body>
