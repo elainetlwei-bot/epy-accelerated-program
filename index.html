@@ -18,12 +18,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .nav-btn:hover { color: #1a1a18; background: var(--bg-secondary); }
 .nav-btn.active { color: var(--maroon); border-bottom-color: var(--maroon); }
 .body { background: white; padding: 1.5rem 1.75rem; }
-.section { display: none; }
-.section.active { display: block; }
+.section { display: none; } .section.active { display: block; }
 .progress-bar { height: 3px; background: var(--bg-secondary); margin-bottom: 1.5rem; border-radius: 2px; overflow: hidden; }
 .progress-fill { height: 100%; background: var(--maroon); border-radius: 2px; transition: width 0.3s ease; }
-.step { display: none; }
-.step.active { display: block; }
+.step { display: none; } .step.active { display: block; }
 .step-indicator { font-size: 12px; color: var(--text-tertiary); margin-bottom: 1rem; }
 .question-label { font-size: 14px; font-weight: 500; color: #1a1a18; margin-bottom: 6px; }
 .question-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; }
@@ -34,34 +32,26 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .radio-option input { accent-color: var(--maroon); width: 15px; height: 15px; }
 .btn { display: inline-block; padding: 9px 20px; font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; border: none; transition: opacity 0.15s, transform 0.1s; }
 .btn:active { transform: scale(0.98); }
-.btn-primary { background: var(--maroon); color: white; }
-.btn-primary:hover { opacity: 0.88; }
-.btn-apply { background: #1a6b1a; color: white; }
-.btn-apply:hover { opacity: 0.88; }
-.btn-ghost { background: transparent; color: var(--text-secondary); border: 0.5px solid var(--border); margin-right: 8px; }
-.btn-ghost:hover { background: var(--bg-secondary); }
+.btn-primary { background: var(--maroon); color: white; } .btn-primary:hover { opacity: 0.88; }
+.btn-apply { background: #1a6b1a; color: white; } .btn-apply:hover { opacity: 0.88; }
+.btn-ghost { background: transparent; color: var(--text-secondary); border: 0.5px solid var(--border); margin-right: 8px; } .btn-ghost:hover { background: var(--bg-secondary); }
 .result-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px; }
-.result-icon.eligible { background: #eaf3de; }
-.result-icon.ineligible { background: #fcebeb; }
-.result-icon.maybe { background: #faeeda; }
+.result-icon.eligible { background: #eaf3de; } .result-icon.ineligible { background: #fcebeb; } .result-icon.maybe { background: #faeeda; }
 .result-title { font-size: 17px; font-weight: 500; margin-bottom: 6px; color: #1a1a18; }
 .result-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; }
 .info-card { background: var(--bg-secondary); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 10px; }
 .info-card h3 { font-size: 12px; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-.info-card p, .info-card li { font-size: 13px; color: #1a1a18; line-height: 1.6; }
-.info-card ul { padding-left: 1.1rem; }
+.info-card li { font-size: 13px; color: #1a1a18; line-height: 1.6; } .info-card ul { padding-left: 1.1rem; }
 .action-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.25rem; }
 .tabs { display: flex; gap: 6px; margin-bottom: 1.5rem; flex-wrap: wrap; }
 .tab { padding: 7px 14px; font-size: 13px; font-weight: 500; border-radius: 8px; border: 0.5px solid var(--border); cursor: pointer; color: var(--text-secondary); background: transparent; transition: all 0.15s; }
-.tab:hover { background: var(--bg-secondary); }
-.tab.active { background: var(--maroon-light); color: var(--maroon); border-color: var(--maroon); }
-.panel { display: none; }
-.panel.active { display: block; }
+.tab:hover { background: var(--bg-secondary); } .tab.active { background: var(--maroon-light); color: var(--maroon); border-color: var(--maroon); }
+.panel { display: none; } .panel.active { display: block; }
 .stats-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-bottom: 1.25rem; }
 .stat-card { background: var(--bg-secondary); border-radius: 8px; padding: 14px 12px; text-align: center; }
 .stat-num { font-size: 24px; font-weight: 500; color: var(--maroon); line-height: 1; }
 .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 5px; line-height: 1.3; }
-.tl-row { display: grid; grid-template-columns: 76px 1fr 1fr; gap: 0; }
+.tl-row { display: grid; grid-template-columns: 76px 1fr 1fr; }
 .tl-year { font-size: 12px; font-weight: 500; color: var(--text-secondary); text-align: right; padding: 14px 12px 0 0; }
 .tl-block { padding: 9px 11px; font-size: 12px; border: 0.5px solid var(--border); border-radius: 8px; margin: 4px 6px 4px 0; line-height: 1.4; }
 .tl-block.ug { background: #f0f4ff; color: #1a3a7a; border-color: #b5c8f0; }
@@ -78,25 +68,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .compare-badge { display: inline-block; background: var(--maroon-light); color: var(--maroon); font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 12px; margin-bottom: 8px; }
 .compare-title { font-size: 14px; font-weight: 500; color: #1a1a18; margin-bottom: 4px; }
 .compare-sub { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; }
-.compare-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; padding: 5px 0; border-top: 0.5px solid var(--border); }
-.compare-key { color: var(--text-secondary); }
-.compare-val { font-weight: 500; color: #1a1a18; }
-.compare-val.good { color: #1a6b1a; }
+.compare-row { display: flex; justify-content: space-between; font-size: 12px; padding: 5px 0; border-top: 0.5px solid var(--border); }
+.compare-key { color: var(--text-secondary); } .compare-val { font-weight: 500; color: #1a1a18; } .compare-val.good { color: #1a6b1a; }
 .faq-item { border-top: 0.5px solid var(--border); padding: 12px 0; cursor: pointer; }
 .faq-item:last-child { border-bottom: 0.5px solid var(--border); }
 .faq-q { font-size: 14px; font-weight: 500; color: #1a1a18; display: flex; justify-content: space-between; align-items: center; }
-.faq-icon { font-size: 18px; color: var(--text-secondary); font-weight: 400; flex-shrink: 0; margin-left: 12px; transition: transform 0.2s; }
+.faq-icon { font-size: 18px; color: var(--text-secondary); flex-shrink: 0; margin-left: 12px; transition: transform 0.2s; }
 .faq-a { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-top: 8px; display: none; }
-.faq-item.open .faq-a { display: block; }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-item.open .faq-a { display: block; } .faq-item.open .faq-icon { transform: rotate(45deg); }
 .free-badge { display: inline-block; background: #eaf3de; color: #1a6b1a; font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 10px; border: 0.5px solid #9fd09f; margin-left: 8px; vertical-align: middle; }
 .planner-summary { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-bottom: 1.25rem; }
 .pscard { background: var(--bg-secondary); border-radius: 8px; padding: 10px 12px; text-align: center; }
 .pscard-num { font-size: 20px; font-weight: 500; line-height: 1; }
 .pscard-label { font-size: 11px; color: var(--text-secondary); margin-top: 4px; line-height: 1.3; }
-.pscard-num.maroon { color: var(--maroon); }
-.pscard-num.green { color: #1a6b1a; }
-.pscard-num.amber { color: #854F0B; }
+.pscard-num.maroon { color: var(--maroon); } .pscard-num.green { color: #1a6b1a; } .pscard-num.amber { color: #854F0B; }
 .planner-bar-outer { height: 8px; background: var(--bg-secondary); border-radius: 4px; overflow: hidden; margin-top: 6px; }
 .planner-bar-fill { height: 100%; background: var(--maroon); border-radius: 4px; transition: width 0.4s ease; }
 .sched-block { border: 0.5px solid var(--border); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
@@ -111,12 +96,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .course-row:first-child { border-top: none; }
 .course-check { width: 17px; height: 17px; accent-color: var(--maroon); cursor: pointer; flex-shrink: 0; margin-top: 2px; }
 .course-check:disabled { opacity: 0.35; cursor: not-allowed; }
-.course-info { min-width: 0; }
 .course-name { font-size: 13px; font-weight: 500; color: #1a1a18; }
 .course-name.taken { color: var(--text-secondary); text-decoration: line-through; }
 .course-nums { font-size: 11px; margin-top: 2px; }
-.course-ug { color: #1a3a7a; }
-.course-grad { color: #5a3e00; }
+.course-ug { color: #1a3a7a; } .course-grad { color: #5a3e00; }
 .course-note { font-size: 11px; color: #854F0B; margin-top: 3px; font-style: italic; }
 .course-right { text-align: right; }
 .course-hrs { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
@@ -126,12 +109,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .no-courses { font-size: 13px; color: var(--text-secondary); font-style: italic; padding: 6px 0; }
 .sem-toggle { font-size: 16px; color: var(--text-secondary); transition: transform 0.2s; cursor: pointer; user-select: none; }
 .sched-block.open .sem-toggle { transform: rotate(180deg); }
-.sched-block .sched-body { display: none; }
-.sched-block.open .sched-body { display: block; }
+.sched-block .sched-body { display: none; } .sched-block.open .sched-body { display: block; }
 .disclaimer-card { border: 0.5px solid #e8c86a; background: var(--gold-light); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.25rem; }
 .disclaimer-card h3 { font-size: 12px; font-weight: 500; color: #5a3e00; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-.disclaimer-card li { font-size: 13px; color: #4a3200; line-height: 1.7; margin-bottom: 4px; }
-.disclaimer-card ul { padding-left: 1.1rem; }
+.disclaimer-card li { font-size: 13px; color: #4a3200; line-height: 1.7; margin-bottom: 4px; } .disclaimer-card ul { padding-left: 1.1rem; }
 .optional-divider { border: none; border-top: 0.5px dashed rgba(0,0,0,0.2); margin: 8px 0 4px; }
 .optional-label { font-size: 11px; font-weight: 500; color: #854F0B; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
 .form-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
@@ -154,7 +135,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
     <button class="nav-btn" onclick="switchSection('planner')">Course planner</button>
   </div>
   <div class="body">
-
     <div class="section active" id="section-checker">
       <div class="progress-bar"><div class="progress-fill" id="prog" style="width:25%"></div></div>
       <div class="step active" id="step-1">
@@ -194,7 +174,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       </div>
       <div class="step" id="step-result"><div id="result-content"></div></div>
     </div>
-
     <div class="section" id="section-explainer">
       <div class="tabs">
         <button class="tab active" onclick="switchTab('timeline')">Degree timeline</button>
@@ -232,15 +211,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
         <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I graduate with two degrees at once? <span class="faq-icon">+</span></div><div class="faq-a">Not simultaneously. You remain classified as an undergraduate until all undergraduate requirements are met. After earning your bachelor&#8217;s, you transition to the graduate program and typically finish your master&#8217;s within about a year.</div></div>
         <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What happens to the 6 non-dual-credit hours? <span class="faq-icon">+</span></div><div class="faq-a">Up to 6 of the 15 graduate hours taken as an undergrad count only toward the master&#8217;s degree. These are applied after you are formally admitted to the EPY graduate program through the MSU Graduate School.</div></div>
         <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need to apply to the Graduate School separately? <span class="faq-icon">+</span></div><div class="faq-a">Yes. You must apply formally to the EPY graduate program through the MSU Graduate School in addition to the accelerated program application.</div></div>
-        <div class="faq-item" onclick="toggleFaq(this)">
-          <div class="faq-q">What are the application deadlines? <span class="free-badge">Free to apply</span><span class="faq-icon">+</span></div>
-          <div class="faq-a">Applying to the accelerated program is free. Deadlines are November 1 to begin in the Spring semester, and May 1 to begin in the Fall semester. You will need a 500&#8211;750 word statement of purpose.</div>
-        </div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What are the application deadlines? <span class="free-badge">Free to apply</span><span class="faq-icon">+</span></div><div class="faq-a">Applying to the accelerated program is free. Deadlines are November 1 to begin in the Spring semester, and May 1 to begin in the Fall semester. You will need a 500&#8211;750 word statement of purpose.</div></div>
         <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What if I plan to apply to a different graduate program? <span class="faq-icon">+</span></div><div class="faq-a">It depends on how many transfer credits that program allows. Some master&#8217;s and graduate programs will accept a number of your completed hours, which could shorten your time to degree. And even if none transfer, having graduate-level coursework on your record makes you a more competitive and distinctive applicant &#8212; it signals academic readiness in a way that most applicants cannot.</div></div>
-        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Who should I contact with questions? <span class="faq-icon">+</span></div><div class="faq-a">Reach out to Dr. Elaine Wei at <a href="mailto:ewei@colled.msstate.edu" style="color:var(--maroon)">ewei@colled.msstate.edu</a> for any questions.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Who should I contact with questions? <span class="faq-icon">+</span></div><div class="faq-a">Reach out to Dr. Elaine Wei at <a href="mailto:ewei@colled.msstate.edu" style="color:#660000">ewei@colled.msstate.edu</a> for any questions.</div></div>
       </div>
     </div>
-
     <div class="section" id="section-planner">
       <div class="planner-summary">
         <div class="pscard"><div class="pscard-num maroon" id="ps-completed">0</div><div class="pscard-label">Credit hours completed</div></div>
@@ -263,7 +238,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       </div>
       <div style="font-size:12px;color:var(--text-secondary);margin-bottom:1.25rem;line-height:1.6" id="planner-intro"></div>
       <div id="schedule-container"></div>
-      <div style="margin-top:1rem;padding:12px 14px;background:var(--maroon-light);border-radius:8px;font-size:13px;color:#4a0000;line-height:1.6">
+      <div style="margin-top:1rem;padding:12px 14px;background:#f9f0f0;border-radius:8px;font-size:13px;color:#4a0000;line-height:1.6">
         <div style="font-weight:500;margin-bottom:8px">Forms you will need</div>
         <table class="form-table">
           <tr><td>Up to 9 dual-credit hours</td><td>&#8220;Undergraduate Enrollment in Accelerated Program&#8221; form</td></tr>
@@ -277,130 +252,35 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
         <button class="btn btn-ghost" onclick="resetPlanner()">Reset planner</button>
       </div>
     </div>
-
   </div>
 </div>
-
 <script>
-var TOTAL_HRS = 15;
-var APPLY_URL = 'https://msstate.co1.qualtrics.com/jfe/form/SV_b4abk3cepmzCgya';
-var COURSES = [
-  { id:'c1', ug:'EPY 4033', grad:'EPY 6033', name:'Application of Learning Theories',                   hrs:3, pattern:'fs', everyTerm:true,  optional:false },
-  { id:'c2', ug:'EPY 4553', grad:'EPY 6553', name:'Creativity and Innovation',                          hrs:3, pattern:'fe', everyTerm:false, optional:false },
-  { id:'c3', ug:'EPY 4513', grad:'EPY 6513', name:'Introduction to Research in Educational Psychology', hrs:3, pattern:'fo', everyTerm:false, optional:false },
-  { id:'c4', ug:'EPY 4073', grad:'EPY 6073', name:'Personal and Motivational Factors in Education',     hrs:3, pattern:'so', everyTerm:false, optional:false },
-  { id:'c5', ug:'EPY 4313', grad:'EPY 8263', name:'Measurement and Evaluation',                         hrs:3, pattern:'so', everyTerm:false, optional:false },
-  { id:'c6', ug:'EPY 4214', grad:'EPY 6214', name:'Educational and Psychological Statistics',           hrs:4, pattern:'fs', everyTerm:true,  optional:true  }
+var TOTAL_HRS=15;
+var APPLY_URL='https://msstate.co1.qualtrics.com/jfe/form/SV_b4abk3cepmzCgya';
+var COURSES=[
+  {id:'c1',ug:'EPY 4033',grad:'EPY 6033',name:'Application of Learning Theories',hrs:3,pattern:'fs',everyTerm:true,optional:false},
+  {id:'c2',ug:'EPY 4553',grad:'EPY 6553',name:'Creativity and Innovation',hrs:3,pattern:'fe',everyTerm:false,optional:false},
+  {id:'c3',ug:'EPY 4513',grad:'EPY 6513',name:'Introduction to Research in Educational Psychology',hrs:3,pattern:'fo',everyTerm:false,optional:false},
+  {id:'c4',ug:'EPY 4073',grad:'EPY 6073',name:'Personal and Motivational Factors in Education',hrs:3,pattern:'so',everyTerm:false,optional:false},
+  {id:'c5',ug:'EPY 4313',grad:'EPY 8263',name:'Measurement and Evaluation',hrs:3,pattern:'so',everyTerm:false,optional:false},
+  {id:'c6',ug:'EPY 4214',grad:'EPY 6214',name:'Educational and Psychological Statistics',hrs:4,pattern:'fs',everyTerm:true,optional:true}
 ];
-function getNextSemester() {
-  var now = new Date(); var m = now.getMonth()+1; var y = now.getFullYear();
-  return (m>=8&&m<=12) ? {season:'spring',year:y+1} : {season:'fall',year:y};
-}
-function buildFourSemesters() {
-  var n=getNextSemester(); var sems=[]; var s=n.season; var y=n.year;
-  for(var i=0;i<4;i++){sems.push({label:cap(s)+' '+y,season:s,year:y});if(s==='fall'){s='spring';y++;}else{s='fall';}}
-  return sems;
-}
+function getNext(){var n=new Date();var m=n.getMonth()+1;var y=n.getFullYear();return(m>=8&&m<=12)?{season:'spring',year:y+1}:{season:'fall',year:y};}
+function build4(){var n=getNext();var s=n.season;var y=n.year;var r=[];for(var i=0;i<4;i++){r.push({label:cap(s)+' '+y,season:s,year:y});if(s==='fall'){s='spring';y++;}else s='fall';}return r;}
 function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
-function offered(c,sem){
-  var p=c.pattern;
-  if(p==='fs')return true;
-  if(p==='fe')return sem.season==='fall'&&sem.year%2===0;
-  if(p==='fo')return sem.season==='fall'&&sem.year%2===1;
-  if(p==='so')return sem.season==='spring'&&sem.year%2===1;
-  return false;
-}
-function syncEvery(el){
-  var cid=el.getAttribute('data-cid');var checked=el.checked;
-  document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(x){x.checked=checked;});
-  lockDupes(cid,checked);updatePlanner();
-}
-function lockDupes(cid,done){
-  var c=COURSES.find(function(x){return x.id===cid;});
-  document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(el,i){el.disabled=done&&i!==0;});
-  document.querySelectorAll('.course-name[data-cid="'+cid+'"]').forEach(function(el){if(done)el.classList.add('taken');else el.classList.remove('taken');});
-  document.querySelectorAll('.badge-area[data-cid="'+cid+'"]').forEach(function(el){
-    if(done){el.innerHTML='<div class="badge-taken">Completed</div>';}
-    else if(c&&c.optional){el.innerHTML='<div class="badge-optional">Optional / 4 hrs</div>';}
-    else{el.innerHTML='<div class="badge-dual">Dual-credit</div>';}
-  });
-}
-function renderSchedule(){
-  var sems=buildFourSemesters();
-  document.getElementById('planner-intro').innerHTML='Courses are shown across <strong>'+sems[0].label+' \u2013 '+sems[3].label+'</strong> based on each course\u2019s offering pattern. EPY 4033/6033 and EPY 4214/6214 appear every semester \u2014 check either off once and it will be marked complete across all semesters.';
-  var container=document.getElementById('schedule-container');container.innerHTML='';
-  var cnt={};
-  sems.forEach(function(sem,si){
-    var req=COURSES.filter(function(c){return!c.optional&&offered(c,sem);});
-    var opt=COURSES.filter(function(c){return c.optional&&offered(c,sem);});
-    var tc=si===0?'tag-next':si===1?'tag-upcoming':'tag-future';
-    var tl=si===0?'Next semester':si===1?'Upcoming':'Future';
-    var div=document.createElement('div');div.className='sched-block open';div.id='sb-'+si;
-    function rc(c){
-      var idx=cnt[c.id]||0;cnt[c.id]=idx+1;
-      var iid='chk-'+c.id+'-'+idx;
-      var oc=c.everyTerm?'syncEvery(this)':'updatePlanner()';
-      var bh=c.optional?'<div class="badge-optional">Optional / 4 hrs</div>':'<div class="badge-dual">Dual-credit</div>';
-      var nh=c.optional?'<div class="course-note">Substitute for EPY 4214 \u2014 watch the caps: dual-credit max 9 hrs, grad-only max 6 hrs</div>':'';
-      return '<div class="course-row"><input type="checkbox" class="course-check" id="'+iid+'" data-cid="'+c.id+'" data-hrs="'+c.hrs+'" onchange="'+oc+'"><div class="course-info"><div class="course-name" data-cid="'+c.id+'">'+c.name+'</div><div class="course-nums"><span class="course-ug">UG: '+c.ug+'</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="course-grad">Grad: '+c.grad+'</span></div>'+nh+'</div><div class="course-right"><div class="course-hrs">'+c.hrs+' hrs</div><div class="badge-area" data-cid="'+c.id+'">'+bh+'</div></div></div>';
-    }
-    var rh=req.length>0?req.map(rc).join(''):'<div class="no-courses">No required courses this semester</div>';
-    var oh=opt.length>0?'<div class="optional-divider"></div><div class="optional-label">Optional substitute</div>'+opt.map(rc).join(''):'';
-    div.innerHTML='<div class="sched-header"><span class="sched-title">'+sem.label+'</span><div style="display:flex;align-items:center;gap:8px"><span class="sched-tag '+tc+'">'+tl+'</span><span class="sem-toggle" onclick="toggleSem(\'sb-'+si+'\')">&#9660;</span></div></div><div class="sched-body">'+rh+oh+'</div>';
-    container.appendChild(div);
-  });
-}
-function updatePlanner(){
-  var counted={};var total=0;
-  document.querySelectorAll('.course-check').forEach(function(c){if(c.checked&&!c.disabled){var cid=c.getAttribute('data-cid');if(!counted[cid]){counted[cid]=true;total+=parseInt(c.getAttribute('data-hrs'));}}});
-  var remain=Math.max(0,TOTAL_HRS-total);var pct=Math.round(Math.min(100,total/TOTAL_HRS*100));
-  document.getElementById('ps-completed').textContent=total;
-  document.getElementById('ps-total').textContent=total+' / '+TOTAL_HRS;
-  document.getElementById('ps-remain').textContent=remain;
-  document.getElementById('prog-pct').textContent=pct+'%';
-  document.getElementById('planner-bar').style.width=pct+'%';
-}
-function resetPlanner(){
-  document.querySelectorAll('.course-check').forEach(function(c){c.checked=false;c.disabled=false;});
-  document.querySelectorAll('.course-name').forEach(function(el){el.classList.remove('taken');});
-  document.querySelectorAll('.badge-area').forEach(function(el){
-    var cid=el.getAttribute('data-cid');var c=COURSES.find(function(x){return x.id===cid;});
-    el.innerHTML=c&&c.optional?'<div class="badge-optional">Optional / 4 hrs</div>':'<div class="badge-dual">Dual-credit</div>';
-  });
-  updatePlanner();
-}
+function off(c,sem){var p=c.pattern;if(p==='fs')return true;if(p==='fe')return sem.season==='fall'&&sem.year%2===0;if(p==='fo')return sem.season==='fall'&&sem.year%2===1;if(p==='so')return sem.season==='spring'&&sem.year%2===1;return false;}
+function syncEvery(el){var cid=el.getAttribute('data-cid');var chk=el.checked;document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(x){x.checked=chk;});lockDupes(cid,chk);updatePlanner();}
+function lockDupes(cid,done){var c=COURSES.find(function(x){return x.id===cid;});document.querySelectorAll('.course-check[data-cid="'+cid+'"]').forEach(function(el,i){el.disabled=done&&i!==0;});document.querySelectorAll('.course-name[data-cid="'+cid+'"]').forEach(function(el){done?el.classList.add('taken'):el.classList.remove('taken');});document.querySelectorAll('.badge-area[data-cid="'+cid+'"]').forEach(function(el){if(done)el.innerHTML='<div class="badge-taken">Completed</div>';else if(c&&c.optional)el.innerHTML='<div class="badge-optional">Optional / 4 hrs</div>';else el.innerHTML='<div class="badge-dual">Dual-credit</div>';});}
+function renderSchedule(){var sems=build4();document.getElementById('planner-intro').innerHTML='Courses are shown across <strong>'+sems[0].label+' \u2013 '+sems[3].label+'</strong> based on each course\u2019s offering pattern. EPY 4033/6033 and EPY 4214/6214 appear every semester \u2014 check either off once and it will be marked complete across all semesters.';var container=document.getElementById('schedule-container');container.innerHTML='';var cnt={};sems.forEach(function(sem,si){var req=COURSES.filter(function(c){return!c.optional&&off(c,sem);});var opt=COURSES.filter(function(c){return c.optional&&off(c,sem);});var tc=si===0?'tag-next':si===1?'tag-upcoming':'tag-future';var tl=si===0?'Next semester':si===1?'Upcoming':'Future';var div=document.createElement('div');div.className='sched-block open';div.id='sb-'+si;function rc(c){var idx=cnt[c.id]||0;cnt[c.id]=idx+1;var oc=c.everyTerm?'syncEvery(this)':'updatePlanner()';var bh=c.optional?'<div class="badge-optional">Optional / 4 hrs</div>':'<div class="badge-dual">Dual-credit</div>';var nh=c.optional?'<div class="course-note">Substitute for EPY 4214 \u2014 watch the caps: dual-credit max 9 hrs, grad-only max 6 hrs</div>':'';return '<div class="course-row"><input type="checkbox" class="course-check" id="chk-'+c.id+'-'+idx+'" data-cid="'+c.id+'" data-hrs="'+c.hrs+'" onchange="'+oc+'"><div><div class="course-name" data-cid="'+c.id+'">'+c.name+'</div><div class="course-nums"><span class="course-ug">UG: '+c.ug+'</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="course-grad">Grad: '+c.grad+'</span></div>'+nh+'</div><div class="course-right"><div class="course-hrs">'+c.hrs+' hrs</div><div class="badge-area" data-cid="'+c.id+'">'+bh+'</div></div></div>';}var rh=req.length>0?req.map(rc).join(''):'<div class="no-courses">No required courses this semester</div>';var oh=opt.length>0?'<div class="optional-divider"></div><div class="optional-label">Optional substitute</div>'+opt.map(rc).join(''):'';div.innerHTML='<div class="sched-header"><span class="sched-title">'+sem.label+'</span><div style="display:flex;align-items:center;gap:8px"><span class="sched-tag '+tc+'">'+tl+'</span><span class="sem-toggle" onclick="toggleSem(\'sb-'+si+'\')">&#9660;</span></div></div><div class="sched-body">'+rh+oh+'</div>';container.appendChild(div);});}
+function updatePlanner(){var c={};var t=0;document.querySelectorAll('.course-check').forEach(function(x){if(x.checked&&!x.disabled){var cid=x.getAttribute('data-cid');if(!c[cid]){c[cid]=true;t+=parseInt(x.getAttribute('data-hrs'));}}});var r=Math.max(0,TOTAL_HRS-t);var p=Math.round(Math.min(100,t/TOTAL_HRS*100));document.getElementById('ps-completed').textContent=t;document.getElementById('ps-total').textContent=t+' / '+TOTAL_HRS;document.getElementById('ps-remain').textContent=r;document.getElementById('prog-pct').textContent=p+'%';document.getElementById('planner-bar').style.width=p+'%';}
+function resetPlanner(){document.querySelectorAll('.course-check').forEach(function(c){c.checked=false;c.disabled=false;});document.querySelectorAll('.course-name').forEach(function(el){el.classList.remove('taken');});document.querySelectorAll('.badge-area').forEach(function(el){var cid=el.getAttribute('data-cid');var c=COURSES.find(function(x){return x.id===cid;});el.innerHTML=c&&c.optional?'<div class="badge-optional">Optional / 4 hrs</div>':'<div class="badge-dual">Dual-credit</div>';});updatePlanner();}
 function toggleSem(id){document.getElementById(id).classList.toggle('open');}
-function switchSection(name){
-  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
-  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
-  document.querySelector('[onclick="switchSection(\''+name+'\')"]').classList.add('active');
-  document.getElementById('section-'+name).classList.add('active');
-}
-function switchTab(name){
-  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
-  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
-  document.querySelector('[onclick="switchTab(\''+name+'\')"]').classList.add('active');
-  document.getElementById('panel-'+name).classList.add('active');
-}
+function switchSection(name){document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});document.querySelector('[onclick="switchSection(\''+name+'\')"]').classList.add('active');document.getElementById('section-'+name).classList.add('active');}
+function switchTab(name){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});document.querySelector('[onclick="switchTab(\''+name+'\')"]').classList.add('active');document.getElementById('panel-'+name).classList.add('active');}
 function getSel(name){var el=document.querySelector('input[name="'+name+'"]:checked');return el?el.value:null;}
-function goNext(step){
-  if(step===1&&!getSel('hours')){alert('Please select an option.');return;}
-  if(step===2&&!getSel('gpa')){alert('Please select an option.');return;}
-  document.getElementById('step-'+step).classList.remove('active');
-  document.getElementById('step-'+(step+1)).classList.add('active');
-  document.getElementById('prog').style.width=((step+1)/4*100)+'%';
-}
-function goBack(step){
-  document.getElementById('step-'+step).classList.remove('active');
-  document.getElementById('step-'+(step-1)).classList.add('active');
-  document.getElementById('prog').style.width=((step-1)/4*100)+'%';
-}
-document.querySelectorAll('.radio-option').forEach(function(label){
-  label.querySelector('input').addEventListener('change',function(){
-    label.closest('.radio-group').querySelectorAll('.radio-option').forEach(function(l){l.classList.remove('selected');});
-    label.classList.add('selected');
-  });
-});
+function goNext(step){if(step===1&&!getSel('hours')){alert('Please select an option.');return;}if(step===2&&!getSel('gpa')){alert('Please select an option.');return;}document.getElementById('step-'+step).classList.remove('active');document.getElementById('step-'+(step+1)).classList.add('active');document.getElementById('prog').style.width=((step+1)/4*100)+'%';}
+function goBack(step){document.getElementById('step-'+step).classList.remove('active');document.getElementById('step-'+(step-1)).classList.add('active');document.getElementById('prog').style.width=((step-1)/4*100)+'%';}
+document.querySelectorAll('.radio-option').forEach(function(label){label.querySelector('input').addEventListener('change',function(){label.closest('.radio-group').querySelectorAll('.radio-option').forEach(function(l){l.classList.remove('selected');});label.classList.add('selected');});});
 function showResult(){
   if(!getSel('enrolled')){alert('Please select an option.');return;}
   var hours=getSel('hours'),gpa=getSel('gpa'),enrolled=getSel('enrolled');
@@ -408,37 +288,14 @@ function showResult(){
   document.getElementById('step-result').classList.add('active');
   document.getElementById('prog').style.width='100%';
   var html='';
-  if(hours==='lt60'){
-    html='<div class="result-icon ineligible">\u2715</div><div class="result-title">Not yet eligible</div><div class="result-desc">You need at least 60 credit hours (including your current semester) to apply.</div><div class="info-card"><h3>What to do now</h3><ul><li>Continue your undergraduate coursework</li><li>Maintain a GPA of 3.50 or higher</li><li>Revisit this checker once you reach 60 hours</li></ul></div>';
-  } else if(gpa==='below350'){
-    html='<div class="result-icon ineligible">\u2715</div><div class="result-title">GPA requirement not met</div><div class="result-desc">The program requires a cumulative GPA of 3.50 or higher. Focus on strengthening your academic record.</div><div class="info-card"><h3>What to do now</h3><ul><li>Work to improve your GPA in upcoming semesters</li><li>Speak with an academic advisor</li><li>Contact Dr. Elaine Wei with questions</li></ul></div>';
-  } else if(enrolled==='other'){
-    html='<div class="result-icon maybe">?</div><div class="result-title">Reach out to us</div><div class="result-desc">This program is designed for current MSU undergraduates. Please contact us directly to explore your options.</div>';
-  } else if(enrolled==='transfer'){
-    html='<div class="result-icon maybe">!</div><div class="result-title">Potentially eligible \u2014 let\u2019s talk</div><div class="result-desc">Your GPA and credit hours look promising! Since you\u2019re not yet enrolled at MSU, connect with the program coordinator to discuss your path forward.</div>';
-  } else {
-    html='<div class="result-icon eligible">\u2713</div><div class="result-title">You appear to be eligible!</div><div class="result-desc">Based on your credit hours and GPA, you meet the basic requirements for the Accelerated Master\u2019s Program in Educational Psychology.</div>'+
-    '<div class="info-card"><h3>Application deadlines</h3><ul><li>November 1 \u2014 to begin in Spring semester</li><li>May 1 \u2014 to begin in Fall semester</li></ul></div>'+
-    '<div class="info-card"><h3>What you\u2019ll need</h3><ul><li>A statement of purpose (500\u2013750 words)</li><li>Formal application through the MSU Graduate School</li></ul></div>'+
-    '<div class="action-row">'+
-      '<button class="btn btn-apply" onclick="window.open(\''+APPLY_URL+'\',\'_blank\')">Apply now \u2192</button>'+
-      '<button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button>'+
-      '<button class="btn btn-ghost" onclick="switchSection(\'planner\')">Plan my courses \u2192</button>'+
-      '<button class="btn btn-ghost" onclick="resetChecker()">Start over</button>'+
-    '</div>';
-    document.getElementById('result-content').innerHTML=html;
-    return;
-  }
-  html+='<div class="action-row"><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="switchSection(\'explainer\')">How it works \u2192</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';
+  if(hours==='lt60'){html='<div class="result-icon ineligible">\u2715</div><div class="result-title">Not yet eligible</div><div class="result-desc">You need at least 60 credit hours (including your current semester) to apply.</div><div class="info-card"><h3>What to do now</h3><ul><li>Continue your undergraduate coursework</li><li>Maintain a GPA of 3.50 or higher</li><li>Revisit this checker once you reach 60 hours</li></ul></div><div class="action-row"><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';}
+  else if(gpa==='below350'){html='<div class="result-icon ineligible">\u2715</div><div class="result-title">GPA requirement not met</div><div class="result-desc">The program requires a cumulative GPA of 3.50 or higher. Focus on strengthening your academic record.</div><div class="info-card"><h3>What to do now</h3><ul><li>Work to improve your GPA in upcoming semesters</li><li>Speak with an academic advisor</li><li>Contact Dr. Elaine Wei with questions</li></ul></div><div class="action-row"><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';}
+  else if(enrolled==='other'){html='<div class="result-icon maybe">?</div><div class="result-title">Reach out to us</div><div class="result-desc">This program is designed for current MSU undergraduates. Please contact us directly to explore your options.</div><div class="action-row"><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';}
+  else if(enrolled==='transfer'){html='<div class="result-icon maybe">!</div><div class="result-title">Potentially eligible \u2014 let\u2019s talk</div><div class="result-desc">Your GPA and credit hours look promising! Since you\u2019re not yet enrolled at MSU, connect with the program coordinator to discuss your path forward.</div><div class="action-row"><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';}
+  else{html='<div class="result-icon eligible">\u2713</div><div class="result-title">You appear to be eligible!</div><div class="result-desc">Based on your credit hours and GPA, you meet the basic requirements for the Accelerated Master\u2019s Program in Educational Psychology.</div><div class="info-card"><h3>Application deadlines</h3><ul><li>November 1 \u2014 to begin in Spring semester</li><li>May 1 \u2014 to begin in Fall semester</li></ul></div><div class="info-card"><h3>What you\u2019ll need</h3><ul><li>A statement of purpose (500\u2013750 words)</li></ul></div><div class="action-row"><button class="btn btn-apply" onclick="window.open(\''+APPLY_URL+'\',\'_blank\')">Apply now \u2192</button><button class="btn btn-primary" onclick="window.location.href=\'mailto:ewei@colled.msstate.edu\'">Contact Dr. Elaine Wei</button><button class="btn btn-ghost" onclick="switchSection(\'planner\')">Plan my courses \u2192</button><button class="btn btn-ghost" onclick="resetChecker()">Start over</button></div>';}
   document.getElementById('result-content').innerHTML=html;
 }
-function resetChecker(){
-  document.getElementById('step-result').classList.remove('active');
-  document.querySelectorAll('.radio-option').forEach(function(l){l.classList.remove('selected');});
-  document.querySelectorAll('input[type=radio]').forEach(function(r){r.checked=false;});
-  document.getElementById('step-1').classList.add('active');
-  document.getElementById('prog').style.width='25%';
-}
+function resetChecker(){document.getElementById('step-result').classList.remove('active');document.querySelectorAll('.radio-option').forEach(function(l){l.classList.remove('selected');});document.querySelectorAll('input[type=radio]').forEach(function(r){r.checked=false;});document.getElementById('step-1').classList.add('active');document.getElementById('prog').style.width='25%';}
 function toggleFaq(el){el.classList.toggle('open');}
 renderSchedule();
 </script>
